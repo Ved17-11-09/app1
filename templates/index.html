@@ -12,20 +12,34 @@
         color: red;
     }
 
+
+
 </style>
 </head>
 
-
 <body>
-    <h1>Covid Stats!</h1><br>
+    <h1>Weather Stats!</h1>
+    <br>
     <form method="POST">
-        <label >Enter a Country Code</label><br><br>
-    <input placeholder="Country Code" name="text">
-    <input type="submit">
-</form>
-    <img src="{{image }}">
-
-
-    <p>You have {{ count }} Visitors.</p>
+        <label>Enter Location Coordinates</label>
+        <br>
+        <br>
+        <input placeholder="Latitude" name="latitude">
+        <input placeholder="Longitude" name="longitude">
+        <input type="button">
+    </form>
+    {% if weather %}
+    <center>
+        <table>
+            <tr><td colspan = "2"><img src="{{ weather.data.condition.icon }}"></img></td></tr>
+            <tr><td>Place</td><td>{{ weather.data.condition.icon }}</td></tr>
+            <tr><td>Religon</td><td>{{ weather.data.condition.icon }}</td></tr>
+            <tr><td>Country</td><td>{{ weather.data.condition.icon }}</td></tr>
+            <tr><td>Condition</td><td>{{ weather.data.condition.icon }}</td></tr>
+            <tr><td>Temprature</td><td>{{ weather.data.condition.icon }}</td></tr>
+        </table>
+    </center>
+    {% endif %}
+    <p>You have {{ count }} Visitors</p>
 </body>
 </html>
